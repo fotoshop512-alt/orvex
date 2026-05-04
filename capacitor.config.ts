@@ -21,7 +21,7 @@ const config: CapacitorConfig = {
     },
     SocialLogin: {
       google: {
-        webClientId: '261073850792-he1n3bevad64ubbg0gnjncbf5cj0r69d.apps.googleusercontent.com',
+        webClientId: process.env.VITE_GOOGLE_WEB_CLIENT_ID || '',
         forceCodeForRefreshToken: true
       }
     }
