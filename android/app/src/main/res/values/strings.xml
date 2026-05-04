@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">YDS PRO</string>
+    <string name="title_activity_main">YDS PRO</string>
+    <string name="package_name">com.ydspro.app</string>
+    <string name="custom_url_scheme">com.ydspro.app</string>
+    <string name="server_client_id">261073850792-he1n3bevad64ubbg0gnjncbf5cj0r69d.apps.googleusercontent.com</string>
+</resources>

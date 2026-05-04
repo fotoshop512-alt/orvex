@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Sadece HTTPS bağlantılarına izin ver -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!-- Sistem sertifikalarına güven -->
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    
+    <!-- Firebase ve Google servisleri için domain config -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">firebaseapp.com</domain>
+        <domain includeSubdomains="true">googleapis.com</domain>
+        <domain includeSubdomains="true">google.com</domain>
+        <domain includeSubdomains="true">firebaseio.com</domain>
+        <domain includeSubdomains="true">cloudfunctions.net</domain>
+        <domain includeSubdomains="true">unsplash.com</domain>
+    </domain-config>
+    
+    <!-- Debug build için localhost (sadece development) -->
+    <debug-overrides>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </debug-overrides>
+</network-security-config>

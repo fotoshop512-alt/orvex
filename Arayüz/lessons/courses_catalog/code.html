@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>English Learning App - Explore Lessons</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#A855F7",
+            "primary-light": "#F3E8FF",
+            "background-light": "#F9F5FF",
+            "background-dark": "#120E1A",
+            "surface-dark": "#231E2E",
+          },
+          fontFamily: {
+            "display": ["Lexend"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style type="text/tailwindcss">
+    :root {
+      --background-dark: #0F091A;
+      --surface-dark: #1E1235;
+      --primary: #A777F8;
+      --primary-light: #D9C3FB;
+      --primary-dark: #2F1E53;
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --glass-surface: rgba(43, 27, 82, 0.4);
+    }
+    body {
+      min-height: max(884px, 100dvh);
+      background-color: var(--background-dark);
+      background-image: radial-gradient(circle at 20% 20%, rgba(167, 119, 248, 0.2) 0%, transparent 30%), radial-gradient(circle at 80% 90%, rgba(76, 81, 255, 0.15) 0%, transparent 40%);
+    }
+    .light body {
+       background-color: #F9F5FF;
+       background-image: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[var(--background-dark)] font-display text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="sticky top-0 z-10 flex items-center justify-between bg-transparent p-4 pb-2">
+<div class="flex size-12 shrink-0 items-center">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full bg-[var(--glass-surface)] border border-[var(--glass-border)] text-base font-bold leading-normal tracking-[0.015em] backdrop-blur-sm min-w-0 p-0">
+<span class="material-symbols-outlined text-2xl text-white">menu</span>
+</button>
+</div>
+<h2 class="flex-1 text-center text-lg font-bold leading-tight tracking-[-0.015em] text-white">Explore Lessons</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex h-12 max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full bg-transparent text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-3xl text-white">account_circle</span>
+</button>
+</div>
+</div>
+<div class="px-4 py-3">
+<label class="flex h-12 w-full min-w-40 flex-col">
+<div class="flex h-full w-full flex-1 items-stretch rounded-full border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-sm">
+<div class="flex items-center justify-center rounded-l-full pl-4 text-gray-400">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input h-full w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-full border-none bg-transparent px-4 pl-2 text-base font-normal leading-normal text-gray-200 placeholder:text-gray-400 focus:outline-0 focus:ring-0" placeholder="Search for lessons, topics..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex gap-3 overflow-x-auto p-3 px-4 pt-0 [-ms-overflow-style:none] [scrollbar-width:none]">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--primary)] pl-4 pr-4">
+<p class="text-white text-sm font-medium leading-normal">All</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-sm pl-4 pr-4">
+<p class="text-gray-200 text-sm font-medium leading-normal">Beginner</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-sm pl-4 pr-4">
+<p class="text-gray-200 text-sm font-medium leading-normal">Intermediate</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-sm pl-4 pr-4">
+<p class="text-gray-200 text-sm font-medium leading-normal">Advanced</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-sm pl-4 pr-4">
+<p class="text-gray-200 text-sm font-medium leading-normal">Speaking</p>
+</button>
+</div>
+<div class="flex flex-col gap-4 p-4 pt-2">
+<div class="flex flex-col gap-4 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-surface)] p-4 backdrop-blur-lg">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-col gap-1 flex-[2_2_0px]">
+<p class="text-sm font-medium leading-normal text-[var(--primary-light)]">B1 Intermediate</p>
+<p class="text-base font-bold leading-tight text-white">Mastering Past Tense</p>
+<p class="text-sm font-normal leading-normal text-gray-400">Learn the difference between simple past and past perfect.</p>
+</div>
+<div class="aspect-square h-20 w-20 flex-shrink-0 rounded-lg bg-cover bg-center bg-no-repeat" data-alt="Abstract colorful gradient wave pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuArLjP4XwtzyJMRnKafQyKXz_1v-9e3UnEcd7yv38rh5eMbHaSyHQnqq1y1FpeEwBLkfh2R7j9ay7nI7h0Vhei0qqROpRh9tsItwSbLktid8ebs3icW-eA4YTnfIkEMxYUaYgJH2orSV0nly6SlLMH_4qo1da79nXXCjb0jO8HrMrN6nT_Zq2SjMXgwwXK1JABWa3sOOmD0Ru8nmHMRP5i_OP-TJokLmej16R1TVnnxKqxSBq5ocC9fbhGz_aeIPUbs_JJZdN1DXiw");'></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-sm font-medium text-gray-400">
+<p>Progress</p>
+<p>50%</p>
+</div>
+<div class="h-2 w-full rounded-full bg-[var(--primary-dark)]">
+<div class="h-2 rounded-full bg-[var(--primary)]" style="width: 50%;"></div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-surface)] p-4 backdrop-blur-lg">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-col gap-1 flex-[2_2_0px]">
+<p class="text-sm font-medium leading-normal text-[var(--primary-light)]">A2 Beginner</p>
+<p class="text-base font-bold leading-tight text-white">Restaurant Vocabulary</p>
+<p class="text-sm font-normal leading-normal text-gray-400">Order food and drinks confidently in any situation.</p>
+</div>
+<div class="aspect-square h-20 w-20 flex-shrink-0 rounded-lg bg-cover bg-center bg-no-repeat" data-alt="Vibrant abstract pattern with circular shapes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZBX6vIRZhjJuqxuX_BWiTh8vDyUx4Yi0UCbRizpR2jNzxeJ9jSXFC7BnNGTABN_putndgmb1PfXSnU1dqH-QXRGlwHrwbSV-32yv4_NgxxhYcQ036PUiPX0GeqH7Mg1lx7mnCB4OTUyVSDWa8JZzoMCUNiui5Ytr4yEWyULbL7emPQQ7kfsLoNlU6zS2iTZvkoDtFyTU1YJ0C6nHo2bHGooy-QSdTY-EcnVwXIVkggy916IHXoAeTQIRYPs_l0Y9fehjwjd4Ns88");'></div>
+</div>
+<button class="flex h-10 w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[var(--primary)] text-sm font-bold text-white shadow-[0_4px_14px_rgba(167,119,248,0.4)]">Start Lesson</button>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-surface)] p-4 backdrop-blur-lg">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-col gap-1 flex-[2_2_0px]">
+<p class="text-sm font-medium leading-normal text-[var(--primary-light)]/50">C1 Advanced</p>
+<p class="text-base font-bold leading-tight text-white/50">The 'TH' Sound</p>
+<p class="text-sm font-normal leading-normal text-gray-400/50">Practice this tricky English sound with exercises.</p>
+</div>
+<div class="aspect-square h-20 w-20 flex-shrink-0 rounded-lg bg-cover bg-center bg-no-repeat opacity-50" data-alt="Soft focused aurora borealis gradient" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLUrAS5li9clN-qOuz9tTqC2MW-S2vpq_G9W8tjI2_CBdR06hNqpyF1RGExvV-F_lNEK26_foNjFB9rqeEfmKKICfTWIcI8yWYXu_H-j4wibeXY4--KGf4Z5VS5FL21-7HEtP2aXnyN5KHYBQUlhe97Q_OAQ6QyGwjy6qrUZuoyULfrG2v5KGTS3atxDZkd0e7z1wwJwGh2OiLb4SOGwBumjN_zhvPe9an41G9iOsHYtUJly8ZyTR_OrgxmNWAB1mNcXqjnC60Ow4");'></div>
+</div>
+<div class="flex h-10 w-full items-center justify-center gap-2 rounded-lg bg-[var(--primary-dark)] text-sm font-bold text-[var(--primary-light)]">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span>Completed</span>
+</div>
+</div>
+</div>
+<div class="sticky bottom-0 mt-auto flex justify-around border-t border-[var(--glass-border)] bg-[var(--surface-dark)]/50 p-2 backdrop-blur-lg">
+<button class="flex flex-col items-center justify-center gap-1 p-2 text-[var(--primary)]">
+<span class="material-symbols-outlined">school</span>
+<span class="text-xs font-bold">Learn</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 p-2 text-gray-500">
+<span class="material-symbols-outlined">local_fire_department</span>
+<span class="text-xs font-medium">Streak</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 p-2 text-gray-500">
+<span class="material-symbols-outlined">reviews</span>
+<span class="text-xs font-medium">Review</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 p-2 text-gray-500">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-xs font-medium">Leaderboard</span>
+</button>
+</div>
+</div>
+
+</body></html>

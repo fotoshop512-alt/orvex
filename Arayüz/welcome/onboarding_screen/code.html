@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Welcome to Your English Journey</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#7F56D9",
+            "accent": "#C4B2F4",
+            "background-light": "#F9F5FF",
+            "background-dark": "#100C14",
+            "text-primary-light": "#101828",
+            "text-secondary-light": "#667085",
+            "text-primary-dark": "#F9F5FF",
+            "text-secondary-dark": "#D6BBFB",
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "2xl": "1.25rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style type="text/tailwindcss">
+    body {
+      min-height: 100dvh;
+      background: linear-gradient(180deg, #1C162D 0%, #151120 100%);
+    }
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .active-dot {
+      background-color: #6C54B7;
+      box-shadow: 0 0 10px #6C54B7, 0 0 20px #6C54B7;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display text-white">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute -top-[15%] -left-[40%] h-80 w-80 rounded-full bg-purple-600/30 opacity-60 blur-3xl filter"></div>
+<div class="absolute bottom-[0%] -right-[40%] h-96 w-96 rounded-full bg-blue-500/30 opacity-50 blur-3xl filter"></div>
+</div>
+<div class="relative z-10 flex h-screen w-full flex-col p-6">
+<header class="flex items-center justify-between">
+<div></div>
+<a class="text-base font-medium text-white/60 transition-colors hover:text-white" href="#">Skip</a>
+</header>
+<main class="flex flex-1 flex-col justify-end pb-4">
+<div class="flex flex-col items-center">
+<div class="w-full max-w-sm px-4">
+<img alt="An abstract illustration representing language learning and progress with purple and pastel tones." class="aspect-[4/3] w-full h-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATCQWMJHMD_c2ziOlojf6NcfdHQWWnGB-l2wrdS40ybr7VQunAzARWsyRR_9EWJbAVpakeNMCOUcYoN77vrWzHx_KQ9LtzNylLeYGGmtmzXrhXl3K4Y3_KwDF2_o3JSg-MgNNRkwVhUoWlUvYcxzW_sA5BnvrMh0K3h6CKAE7X-u9X6vQQbL15N6vMfaAvd5_0tNiEVkNB2aSQHWObDRpoOD5BtlhEUvGKIOaDDNgzVW2CxhO_pETY9xpAmLMGtsSj3wT-sYA1C8s"/>
+</div>
+<h1 class="mt-8 text-3xl font-bold leading-tight tracking-tight text-center text-white">
+            Master English with Us
+          </h1>
+<p class="mt-3 max-w-xs text-base font-normal leading-relaxed text-center text-white/70">
+            Personalized lessons, interactive exercises, and real-world conversations.
+          </p>
+<div class="flex w-full flex-row items-center justify-center gap-2.5 py-8">
+<div class="h-2 w-6 rounded-full active-dot"></div>
+<div class="h-2 w-2 rounded-full bg-white/20"></div>
+<div class="h-2 w-2 rounded-full bg-white/20"></div>
+</div>
+</div>
+<div class="flex w-full flex-col items-center gap-4">
+<button class="flex h-14 w-full max-w-sm items-center justify-center rounded-2xl bg-white text-lg font-bold leading-none tracking-wide text-gray-900 shadow-2xl shadow-purple-900/50 transition-transform duration-200 ease-in-out hover:scale-[1.02] hover:bg-opacity-95">
+            Get Started
+          </button>
+<a class="glass-effect flex h-14 w-full max-w-sm items-center justify-center rounded-2xl text-base font-medium leading-normal text-white/80 transition-colors hover:text-white" href="#">
+            Have an account? <span class="ml-1.5 font-semibold text-white">Log in</span>
+</a>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
