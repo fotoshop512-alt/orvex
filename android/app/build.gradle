@@ -22,10 +22,10 @@ android {
     }
     signingConfigs {
         release {
-            storeFile file("../ydspro-release-key")
-            storePassword "Cenderme.030303"
-            keyAlias "ydspro-key"
-            keyPassword "Cenderme.030303"
+            storeFile file(System.getenv("KEYSTORE_PATH") ?: "../ydspro-release-key")
+            storePassword System.getenv("KEYSTORE_PASSWORD") ?: ""
+            keyAlias System.getenv("KEY_ALIAS") ?: ""
+            keyPassword System.getenv("KEY_PASSWORD") ?: ""
         }
     }
     buildTypes {

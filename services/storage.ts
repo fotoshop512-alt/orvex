@@ -42,7 +42,7 @@ export interface UserProfile extends User {
   avatarId?: number; // User's selected avatar ID
 }
 
-const ADMIN_EMAIL = 'burakuzunn03@gmail.com';
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || '';
 
 // --- Storage Service ---
 export const storageService = {
@@ -166,7 +166,7 @@ export const storageService = {
         console.log('[Storage] Initializing SocialLogin...');
         await SocialLogin.initialize({
           google: {
-            webClientId: '261073850792-he1n3bevad64ubbg0gnjncbf5cj0r69d.apps.googleusercontent.com',
+            webClientId: process.env.GOOGLE_WEB_CLIENT_ID || '',
           }
         });
 

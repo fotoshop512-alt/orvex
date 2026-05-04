@@ -23,6 +23,9 @@ STORE_TEST_ACCOUNTS.md
 google-services.json
 *.jks
 *.keystore
+ydspro-release-key
+android/signing_report.txt
+android/build_log.txt
 
 # Editor directories and files
 .vscode/*
