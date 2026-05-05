@@ -31,7 +31,6 @@ import { NOUNS_TESTS } from './data/nounsQuizData';
 import { STATIC_ADJECTIVES_LIST } from './data/adjectivesData';
 import { ADJECTIVES_TESTS } from './data/adjectivesQuizData';
 
-import { SplashScreen } from '@capacitor/splash-screen';
 import { cleanupAudio } from './utils/sound';
 
 const App: React.FC = () => {
@@ -43,13 +42,19 @@ const App: React.FC = () => {
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [initError, setInitError] = useState<string | null>(null);
 
-  // Hide splash screen immediately
+  // Hide splash screen and show app
   useEffect(() => {
-    // Show the splash for a bit, then hide
     const timeout = setTimeout(() => {
-      SplashScreen.hide().catch(() => { });
+      // Only try SplashScreen on Capacitor (mobile)
+      if ((window as any).Capacitor) {
+        try {
+          import('@capacitor/splash-screen').then(({ SplashScreen }) => {
+            SplashScreen.hide().catch(() => {});
+          }).catch(() => {});
+        } catch (e) {}
+      }
       setLoading(false);
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timeout);
   }, []);
